@@ -11,11 +11,11 @@
 		/>
 		<meta name="theme-color" content="#171717" />
 		<meta name="robots" content="noindex,nofollow" />
-		<meta name="description" content="Open WebUI" />
+		<meta name="description" content="ALIAS Labs - AI-Powered Consulting Solutions" />
 		<link
 			rel="search"
 			type="application/opensearchdescription+xml"
-			title="Open WebUI"
+			title="ALIAS Labs"
 			href="/opensearch.xml"
 		/>
 
@@ -73,7 +73,7 @@
 			})();
 		</script>
 
-		<title>Open WebUI</title>
+		<title>ALIAS Labs | AI-Powered Consulting Platform</title>
 
 		%sveltekit.head%
 	</head>
@@ -91,51 +91,48 @@
 				}
 			</style>
 
-			<img
-				id="logo"
-				style="
-					position: absolute;
-					width: auto;
-					height: 6rem;
-					top: 44%;
-					left: 50%;
-					transform: translateX(-50%);
-				"
-				src="/static/splash.png"
-			/>
-
 			<div
 				style="
 					position: absolute;
-					top: 33%;
+					top: 44%;
 					left: 50%;
-
-					width: 24rem;
-					transform: translateX(-50%);
-
-					display: flex;
-					flex-direction: column;
-					align-items: center;
+					transform: translate(-50%, -50%);
+					text-align: center;
+					font-family: system-ui, -apple-system, sans-serif;
 				"
 			>
-				<img
-					id="logo-her"
-					style="width: auto; height: 13rem"
-					src="/static/splash.png"
-					class="animate-pulse-fast"
-				/>
-
-				<div style="position: relative; width: 24rem; margin-top: 0.5rem">
+				<h1 
+					style="
+						font-size: 2.5rem;
+						font-weight: 600;
+						margin-bottom: 1rem;
+						color: #000;
+					"
+					class="dark:text-white"
+				>
+					ALIAS Labs
+				</h1>
+				<p 
+					style="
+						font-size: 1.125rem;
+						color: #666;
+						margin-bottom: 2rem;
+					"
+					class="dark:text-gray-300"
+				>
+					Loading your AI consulting workspace...
+				</p>
+				<div style="position: relative; width: 24rem; margin: 0 auto;">
 					<div
 						id="progress-background"
 						style="
 							position: absolute;
 							width: 100%;
 							height: 0.75rem;
-
 							border-radius: 9999px;
-							background-color: #fafafa9a;
+							background-color: #f3f4f6;
 						"
+						class="dark:bg-gray-800"
 					></div>
 
 					<div
@@ -145,16 +142,13 @@
 							width: 0%;
 							height: 0.75rem;
 							border-radius: 9999px;
-							background-color: #fff;
+							background-color: #2563eb;
+							transition: width 0.3s ease;
 						"
-						class="bg-white"
+						class="dark:bg-blue-500"
 					></div>
 				</div>
 			</div>
-
-			<!-- <span style="position: absolute; bottom: 32px; left: 50%; margin: -36px 0 0 -36px">
-				Footer content
-			</span> -->
 		</div>
 	</body>
 </html>
@@ -172,51 +166,20 @@
 		background: #000;
 	}
 
-	html.dark #splash-screen img {
-		filter: invert(1);
+	html.dark .dark\:text-white {
+		color: #fff;
 	}
 
-	html.her #splash-screen {
-		background: #983724;
+	html.dark .dark\:text-gray-300 {
+		color: #d1d5db;
 	}
 
-	#logo-her {
-		display: none;
+	html.dark .dark\:bg-gray-800 {
+		background-color: #1f2937;
 	}
 
-	#progress-background {
-		display: none;
-	}
-
-	#progress-bar {
-		display: none;
-	}
-
-	html.her #logo {
-		display: none;
-	}
-
-	html.her #logo-her {
-		display: block;
-		filter: invert(1);
-	}
-
-	html.her #progress-background {
-		display: block;
-	}
-
-	html.her #progress-bar {
-		display: block;
-	}
-
-	@media (max-width: 24rem) {
-		html.her #progress-background {
-			display: none;
-		}
-
-		html.her #progress-bar {
-			display: none;
-		}
+	html.dark .dark\:bg-blue-500 {
+		background-color: #3b82f6;
 	}
 
 	@keyframes pulse {
